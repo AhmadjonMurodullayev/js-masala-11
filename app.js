@@ -1,5 +1,5 @@
 // 1.Berilgan ikki massivning umumiy elementlarini toping.
-function commonElements(arr1, arr2) {
+function commonElement(arr1, arr2) {
     let arr = []
     for(let i =0; i < arr1.length; i++){
         for(let g = 0 ; g < arr2.length; g++){
@@ -11,7 +11,7 @@ function commonElements(arr1, arr2) {
     return arr
 }
 
-console.log(commonElements([1, 2, 3, 4], [3, 4, 5, 6])); // [3, 4]
+console.log(commonElement([1, 2, 3, 4], [3, 4, 5, 6])); // [3, 4]
 
 
 
@@ -49,12 +49,13 @@ function symmetricDifference(arr1, arr2) {
      return arr4
 }
 
-console.log(symmetricDifference([1, 2, 3,], [3, 4, 5])); // [1, 2, 4, 5]
+console.log(symmetricDifference([1, 2, 3,], [3, 4, 5]));
+ // [1, 2, 4, 5]
 
 
 // 4.Berilgan massiv ichida musbat, manfiy va nol 
 // qiymatli raqamlarning foizini hisoblang.
-function calculatePercentages(arr) {
+function numberN(arr) {
     let positive = 0;
     let negative = 0;
     let zero = 0;
@@ -67,14 +68,14 @@ function calculatePercentages(arr) {
         zero++;
       }
     }
-    return {
+    return { 
       positive: (positive / arr.length) * 100,
       negative: (negative / arr.length) * 100,
       zero: (zero / arr.length) * 100,
     };
   }
 
-console.log(calculatePercentages([1, -2, 0, 4, -5, 6, 0])); 
+console.log(numberN([1, -2, 0, 4, -5, 6, 0])); 
 // {positive: 42.86, negative: 28.57, zero: 28.57}
 
 // 5.Berilgan qator ichidagi har bir belgini faqat bir marta qoldirib,
@@ -92,7 +93,8 @@ function findPairs(arr, target) {
     return result
 }
 
-console.log(findPairs([1, 2, 3, 4, 5], 6)); // [[1, 5], [2, 4]]
+console.log(findPairs([1, 2, 3, 4, 5], 6));
+ // [[1, 5], [2, 4]]
 
 
 
@@ -103,7 +105,8 @@ function squareNumbers(arr) {
     return arr.map((a) => a * a)
 }
 
-console.log(squareNumbers([1, 2, 3, 4, 5])); // [1, 4, 9, 16, 25]
+console.log(squareNumbers([1, 2, 3, 4, 5]));
+ // [1, 4, 9, 16, 25]
 
 // 7.Berilgan oraliqda nechta palindrom son borligini toping.
 function countPalindromNumbers(start, end) {
@@ -117,7 +120,8 @@ function countPalindromNumbers(start, end) {
     return num;
   }
 
-console.log(countPalindromNumbers(1, 100)); // 18 (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 44, 55, 66, 77, 88, 99)
+console.log(countPalindromNumber(1, 100)); 
+// 18 (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 44, 55, 66, 77, 88, 99)
 
 // 8.Berilgan sonlar qatorini vergul 
 // bilan ajratilgan qator ko'rinishida qaytaring.
@@ -126,4 +130,18 @@ let arr2 =arr.join(" , ")
 return arr2
 }
 
-console.log(joinWithCommas([1, 2, 3, 4, 5])); // "1, 2, 3, 4, 5"
+console.log(joinWithComma([1, 2, 3, 4, 5])); // "1, 2, 3, 4, 5"
+
+
+
+
+
+// masala
+
+setInterval(() =>{
+  let date = new Date()
+  let hours =date.getHours();
+  let minuts = date.getMinutes();
+  let secund =date.getSeconds();
+  document.body.innerHTML = `${hours}: ${minuts < 10 ? "0" + minuts : minuts}: ${secund < 10 ? "0" + secund : secund}`
+},100)
